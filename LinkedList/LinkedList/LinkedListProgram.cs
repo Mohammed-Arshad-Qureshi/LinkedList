@@ -107,24 +107,6 @@ namespace LinkedList
             return null;
         }
 
-        internal Node DeleteNode(int data)
-        {
-            Node temp = head;
-            Node previous = null;
-            while (temp != null)
-            {
-                if (temp.data == data)
-                {
-
-                    previous.next = temp.next;
-                    Console.WriteLine(data + "  Node Deleted Successfully !!");
-                    return previous;
-                }
-                previous = temp;
-                temp = temp.next;
-            }
-            return null;
-        }
 
 
     }
