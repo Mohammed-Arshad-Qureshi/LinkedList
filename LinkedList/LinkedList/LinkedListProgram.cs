@@ -115,9 +115,8 @@ namespace LinkedList
             {
                 if (temp.data == data)
                 {
-
                     previous.next = temp.next;
-                    Console.WriteLine(data + "  Node Deleted Successfully !!");
+                    Console.WriteLine("[" + data + "]  Node Deleted Successfully !!");
                     return previous;
                 }
                 previous = temp;

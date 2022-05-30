@@ -15,6 +15,11 @@ namespace LinkedList
             Console.WriteLine("Inserted 40 between 50 and 30 Successfully");
             list.Display();
 
+            Console.WriteLine("\n\n");
+
+            list.DeleteNode(40);
+            list.Display();
+
 
             //Console.WriteLine("\n--------------- Deleted firt node ---------");
             //Node nodes = list.DeleteFirstNode();
