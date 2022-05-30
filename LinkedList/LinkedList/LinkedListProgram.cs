@@ -33,11 +33,20 @@ namespace LinkedList
                     bet.next = temp;
                     head.next = bet;
                 }
-
             }
-            
         }
 
+
+        internal Node DeleteFirstNode()
+        {
+            if(head == null)
+            {
+                return null;
+            }
+            this.head = this.head.next;
+            return head;
+          
+        }
 
 
         internal void Display()

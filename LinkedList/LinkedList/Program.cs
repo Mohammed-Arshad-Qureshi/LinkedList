@@ -11,7 +11,12 @@ namespace LinkedList
             list.Add(56);
             list.Add(70);
             list.Add(30);
+
+
+            Console.WriteLine("\n--------------- Deleted firt node ---------");
+            Node nodes = list.DeleteFirstNode();
             list.Display();
+            
         }
     }
 }
