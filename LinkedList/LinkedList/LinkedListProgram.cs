@@ -92,7 +92,7 @@ namespace LinkedList
             Node node = new Node(data);
             Node temp = head;
             Node previous = null;
-            while(temp != null)
+            while (temp != null)
             {
                 if (temp.data == 30)
                 {
@@ -125,11 +125,30 @@ namespace LinkedList
             return null;
         }
 
+        internal void AddDataAscendingOrder(int data)
+        {
+            Console.WriteLine("[" + data + "]" + "inserted in LinkedList");
+            if(head == null)
+            {
+                head = new Node(data);
+            }
+            else if(data < head.data)
+            {
+                Node temp = new Node(data);
+                temp.next = head;
+                head = temp;
+            }
+            else
+            {
+                head.Sort(data);
+            }
 
+
+        }
     }
 
-
 }
+
 
 
 
