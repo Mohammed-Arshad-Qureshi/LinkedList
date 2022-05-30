@@ -11,25 +11,38 @@ namespace LinkedList
         {
             Console.WriteLine(data + " first created in Linked list");
             Node node = new Node(data);
-            if(head == null)
+            if (head == null)
             {
                 head = node;
             }
             else
             {
                 Node temp = head;
-                while(temp.next != null)
+                
+                while (temp.next != null)
                 {
                     temp = temp.next;
                 }
-                temp.next = node;
+                if (node.data != 30)
+                {
+                    temp.next = node;
+                }
+                if(node.data == 30)
+                {
+                    Node bet = node;
+                    bet.next = temp;
+                    head.next = bet;
+                }
+
             }
             
         }
 
+
+
         internal void Display()
         {
-            Node temp = this.head;
+            Node temp = head;
             if (temp == null)
             {
                 Console.WriteLine("LinkedList is empty");
@@ -41,5 +54,10 @@ namespace LinkedList
                 temp = temp.next;
             }
         }
+
+
     }
+
+    
 }
+
