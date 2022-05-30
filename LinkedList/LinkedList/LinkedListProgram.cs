@@ -9,31 +9,21 @@ namespace LinkedList
         internal Node head;
         internal void Add(int data)
         {
-            Console.WriteLine(data + " first created in Linked list");
-            Node node = new Node(data);
-            if (head == null)
+            Node n = new Node(data);
+            if (this.head == null)
             {
-                head = node;
+                this.head = n;
             }
             else
             {
                 Node temp = head;
-
                 while (temp.next != null)
                 {
                     temp = temp.next;
                 }
-                if (node.data != 30)
-                {
-                    temp.next = node;
-                }
-                if (node.data == 30)
-                {
-                    Node bet = node;
-                    bet.next = temp;
-                    head.next = bet;
-                }
+                temp.next = n;
             }
+            Console.WriteLine($"{n.data} inserted into linked list");
         }
 
 
@@ -95,9 +85,72 @@ namespace LinkedList
             }
             return null;
         }
+
+        internal Node AddNodePartucularPositon(int data)
+        {
+
+            Node node = new Node(data);
+            Node temp = head;
+            Node previous = null;
+            while(temp != null)
+            {
+                if (temp.data == 30)
+                {
+                    previous.next = node;
+                    node.next = temp;
+                    return previous;
+                }
+                previous = temp;
+                temp = temp.next;
+
+            }
+            return null;
+        }
+
+        internal Node DeleteNode(int data)
+        {
+            Node temp = head;
+            Node previous = null;
+            while (temp != null)
+            {
+                if (temp.data == data)
+                {
+
+                    previous.next = temp.next;
+                    Console.WriteLine(data + "  Node Deleted Successfully !!");
+                    return previous;
+                }
+                previous = temp;
+                temp = temp.next;
+            }
+            return null;
+        }
+
+
     }
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

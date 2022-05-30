@@ -8,13 +8,12 @@ namespace LinkedList
         static void Main(string[] args)
         {
             LinkedListProgram list = new LinkedListProgram();
-            list.Add(56);
-            list.Add(70);
+            list.Add(50);
             list.Add(30);
-
-            list.Search(30);
-
-
+            list.Add(70);
+            list.AddNodePartucularPositon(40);
+            Console.WriteLine("Inserted 40 between 50 and 30 Successfully");
+            list.Display();
 
 
             //Console.WriteLine("\n--------------- Deleted firt node ---------");
