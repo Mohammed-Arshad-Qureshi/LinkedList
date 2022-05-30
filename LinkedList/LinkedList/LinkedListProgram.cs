@@ -18,7 +18,7 @@ namespace LinkedList
             else
             {
                 Node temp = head;
-                
+
                 while (temp.next != null)
                 {
                     temp = temp.next;
@@ -27,7 +27,7 @@ namespace LinkedList
                 {
                     temp.next = node;
                 }
-                if(node.data == 30)
+                if (node.data == 30)
                 {
                     Node bet = node;
                     bet.next = temp;
@@ -39,26 +39,26 @@ namespace LinkedList
 
         internal Node DeleteFirstNode()
         {
-            if(head == null)
+            if (head == null)
             {
                 return null;
             }
             this.head = this.head.next;
             return head;
-          
+
         }
         internal Node DeleteLastNode()
         {
-            if(head == null)
+            if (head == null)
             {
                 return null;
             }
-            if(head.next == null)
+            if (head.next == null)
             {
                 return null;
             }
             Node temp = head;
-            while(temp.next.next != null)
+            while (temp.next.next != null)
             {
                 temp = temp.next;
             }
@@ -82,9 +82,22 @@ namespace LinkedList
             }
         }
 
+        internal Node Search(int data)
+        {
+            while (head != null)
+            {
+                if (head.data == data)
+                {
+                    return this.head;
+                }
+                this.head = this.head.next;
 
+            }
+            return null;
+        }
     }
 
-    
+
 }
+
 
