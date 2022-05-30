@@ -13,10 +13,16 @@ namespace LinkedList
             list.Add(30);
 
 
-            Console.WriteLine("\n--------------- Deleted firt node ---------");
-            Node nodes = list.DeleteFirstNode();
+            //Console.WriteLine("\n--------------- Deleted firt node ---------");
+            //Node nodes = list.DeleteFirstNode();
+            //list.Display();
+
+            Console.WriteLine("\n--------------- Deleted Last node ---------");
+            Node node = list.DeleteLastNode();
             list.Display();
-            
+
+
+
         }
     }
 }

@@ -47,6 +47,24 @@ namespace LinkedList
             return head;
           
         }
+        internal Node DeleteLastNode()
+        {
+            if(head == null)
+            {
+                return null;
+            }
+            if(head.next == null)
+            {
+                return null;
+            }
+            Node temp = head;
+            while(temp.next.next != null)
+            {
+                temp = temp.next;
+            }
+            temp.next = null;
+            return head;
+        }
 
 
         internal void Display()
