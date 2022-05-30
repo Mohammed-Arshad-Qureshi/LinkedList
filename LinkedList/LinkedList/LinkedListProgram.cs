@@ -10,15 +10,19 @@ namespace LinkedList
         internal void Add(int data)
         {
             Console.WriteLine(data + " first created in Linked list");
+            Node node = new Node(data);
             if(head == null)
             {
-                head = new Node(data);
+                head = node;
             }
             else
             {
-                Node temp = new Node(data);
-                temp.next = head;
-                head = temp;
+                Node temp = head;
+                while(temp.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = node;
             }
             
         }
